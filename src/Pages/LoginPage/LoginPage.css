@@ -84,3 +84,12 @@
     cursor: pointer;
     color: rgba(11, 92, 124, 0.959);
 }
+
+
+
+@media (max-width: 420px) {
+    .login-popup{
+        height: 100%;
+        width: 100%;
+    }
+}

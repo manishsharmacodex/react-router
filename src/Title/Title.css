@@ -1,0 +1,15 @@
+.title{
+    text-align: center;
+}
+
+.title .text-title{
+    margin-top: 50px;
+    font-size: 40px;
+    animation: fadeIn 5s;
+}
+
+@media (max-width: 420px){
+    .title .text-title{
+        font-size: 30px;
+    }
+}

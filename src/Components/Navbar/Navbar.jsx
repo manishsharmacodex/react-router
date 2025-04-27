@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = ({setShowLogin}) => {
   const [menu, setMenu] = useState("/");
+  const navigate = useNavigate();
 
   return (
     <div className="navbar">
-      <NavLink to={"/"}><h1 className="text-logo">{assets.text_logo}</h1></NavLink>
+      <h1 className="text-logo" onClick={()=>navigate("/")}>{assets.text_logo}</h1>
       <ul>
         <NavLink to={"/"}>
           <li
@@ -34,20 +35,20 @@ const Navbar = ({setShowLogin}) => {
             Products
           </li>
         </NavLink>
-        <NavLink to={"/about-us"}>
+        <NavLink to={"/about"}>
           <li
-            onClick={() => setMenu("about-us")}
-            className={menu === "about-us" ? "active" : ""}
+            onClick={() => setMenu("about")}
+            className={menu === "about" ? "active" : ""}
           >
-            About Us
+            About
           </li>
         </NavLink>
-        <NavLink to={"/contact-us"}>
+        <NavLink to={"/contact"}>
           <li
-            onClick={() => setMenu("contact-us")}
-            className={menu === "contact-us" ? "active" : ""}
+            onClick={() => setMenu("contact")}
+            className={menu === "contact" ? "active" : ""}
           >
-            Contact Us
+            Contact
           </li>
         </NavLink>
       </ul>

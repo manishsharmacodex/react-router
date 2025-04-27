@@ -16,7 +16,7 @@ const Footer = ({setShowLogin}) => {
               <Link to={"/menu"}><li>Menu</li></Link>
               <Link to={"/products"}><li>Products</li></Link>
               <Link to={"/about-us"}><li>About Us</li></Link>
-              <Link to={"/contact-us"}><li>Contact Us</li></Link>
+              <Link to={"/contact"}><li>Contact Us</li></Link>
           </ul>
         </div>
 
